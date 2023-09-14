@@ -13,7 +13,7 @@ document.getElementById("NGGsubmit").onclick = function (chosenNumber) {
     chosenNumber = document.getElementById("NGGinput").value;
     guesses+=1;
 
-    let number = Math.floor(Math.random() * 100 + 1);
+    let number = Math.floor(Math.random() * 10 + 1);
     document.getElementById("NGGdisplay").innerHTML = number;
 
 
