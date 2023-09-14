@@ -17,6 +17,8 @@ document.getElementById("NGGsubmit").onclick = function numberGuess(){
 
     let random = Math.floor(Math.random() * 10 + 1);
 
+    document.getElementById("screen").innerHTML = random;
+
     if (chosenNumber == random) {
         window.prompt("We have a winner!!!")
     }
