@@ -7,21 +7,18 @@ btnSound[0].addEventListener("click", (e) => {
     audio.play();
 });
 */
-let chosenNumber;
+function numberGetter() {
+    return chosenNumber = document.getElementById("NGGinput").value
+}
 
-document.getElementById("NGGsubmit").onclick = function (chosenNumber) {
-    chosenNumber = document.getElementById("NGGinput").value;
-    guesses+=1;
+document.getElementById("NGGsubmit").onclick = function numberGuess(){
 
-    let number = Math.floor(Math.random() * 10 + 1);
-    document.getElementById("NGGdisplay").innerHTML = number;
+    let chosenNumber = numberGetter();
 
+    let random = Math.floor(Math.random() * 10 + 1);
 
-    if (document.getElementById("NGGinput").onchange == true) {
-        document.getElementById("NGGdisplay").innerHTML = "What a cheater 🙄";
-    }  
-    if (chosenNumber == number) {
-        window.alert("✨ We have a winner!!! ✨");
+    if (chosenNumber == random) {
+        window.prompt("We have a winner!!!")
     }
-    
+
 }
