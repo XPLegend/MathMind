@@ -87,17 +87,22 @@ margin-top: 20px;
     display: flex;  justify-content: center;  align-items: center;
     background-image: linear-gradient( to bottom right, rgb(128, 226, 226), rgb(72, 168, 224));
     border: 2px var(--prefBorderColor);  border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom-color: rgba(240, 248, 255, 0);
-    height: 200px;  width: 600px;
+    height: 100px;  width: 600px;
     font-weight: bolder;  font-family: sans-serif;
     }
 
 #keyboard{
     border: 2px var(--prefBorderColor); border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;
     width: 600px;
-    height: 500px;
+    height: 310px;
     margin: auto; margin-bottom: 40px;
     background-color: rgb(206, 206, 206);
-    display: flex;  
+    align-items: center; 
+}
+
+.row{
+    margin: auto;
+    width: fit-content;
 }
 
 #score{
@@ -127,6 +132,11 @@ margin-top: 20px;
 }
 
 .button{
-    margin: auto;
+    margin: 5px;
     border: 2px var(--prefBorderColor); border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
 }
