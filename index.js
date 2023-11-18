@@ -84,14 +84,20 @@ document.getElementById("submit").onclick = function submit() {
     //empty "the array" 
     userResult = [];
 
+    //AUTO RESTART
+    firstNumber = Math.floor(Math.random() * 100);
+    secondNumber = Math.floor(Math.random() * 100);
+
+    document.getElementById("display").innerHTML =  `${firstNumber} + ${secondNumber}`;
+
     //DEBUG
     console.log(`User answer: ${res}`);
 }
 
 //DIFFICULTIES
 document.getElementById("gen").onclick = function difficulty1() {
-    firstNumber = Math.floor(Math.random() * 9);
-    secondNumber = Math.floor(Math.random() * 9);
+    firstNumber = Math.floor(Math.random() * 100);
+    secondNumber = Math.floor(Math.random() * 100);
 
     //DISPLAY ON -SCREEN-
     document.getElementById("display").innerHTML = `${firstNumber} + ${secondNumber}`;
