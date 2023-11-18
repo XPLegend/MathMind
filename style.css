@@ -32,9 +32,10 @@ text-shadow: 5px 4px 3px black;
 #settings{
     height: 50px;
     width: 740px;
-    border: 2px var(--prefBorderColor); border-radius: 10px;
-    background-color: rgb(169, 233, 233);
+    border: 5px black; border-radius: 10px; border-style: dashed;
+    background-color: rgb(241, 170, 38);
     margin: auto;
+    display: flex;
 }
 
 #page-title{
@@ -42,9 +43,7 @@ text-align: center;
 font-family: sans-serif;
 }
 
-h3{
-
-}
+/* h3 {} */
 
 footer{
 background-color: rgba(136, 136, 136, 0.6);
