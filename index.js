@@ -28,46 +28,46 @@ let ctrNumber = 0;
 
 
 //CREATE THE NUMBER BY PUSHING THE DIGITS IN IT
-let result = [];
+let userResult = [];
 
 //KEYBOARD KEYS
 document.getElementById("one").onclick = function add1() {
-    result.push(1);
+    userResult.push(1);
 }
 document.getElementById("two").onclick = function add2() {
-    result.push(2);
+    userResult.push(2);
 }
 document.getElementById("three").onclick = function add3() {
-    result.push(3);
+    userResult.push(3);
 }
 document.getElementById("four").onclick = function add4() {
-    result.push(4);
+    userResult.push(4);
 }
 document.getElementById("five").onclick = function add5() {
-    result.push(5);
+    userResult.push(5);
 }
 document.getElementById("six").onclick = function add6() {
-    result.push(6);
+    userResult.push(6);
 }
 document.getElementById("seven").onclick = function add7() {
-    result.push(7);
+    userResult.push(7);
 }
 document.getElementById("eight").onclick = function add8() {
-    result.push(8);
+    userResult.push(8);
 }
 document.getElementById("nine").onclick = function add9() {
-    result.push(9);
+    userResult.push(9);
 }
 document.getElementById("zero").onclick = function add0() {
-    result.push(0);
+    userResult.push(0);
 }
 
 //SEND FINAL RESULT
 document.getElementById("submit").onclick = function submit() {
-    
+    let res = userResult.reduce((a, b) => a + b, 0)
 
     //DEBUG
-    console.log(Result);
+    console.log(res);
 }
 
 //DIFFICULTIES
