@@ -18,7 +18,7 @@ D = 1000
 
 */
 
-let cifreMax = 2; //Must be decided by the user in the future
+let difficulty = 9; //Max number achivable
 let firstNumber = 0;
 let secondNumber = 0;
 
@@ -62,6 +62,17 @@ document.getElementById("zero").onclick = function add0() {
     userResult.push("0");
 }
 
+//SET DIFFICULTY
+document.getElementById("difOne").onclick = function cd1(){
+    difficulty = 9;
+}
+document.getElementById("difTwo").onclick = function cd2(){
+    difficulty = 99;
+}
+document.getElementById("difThree").onclick = function cd3(){
+   difficulty = 999; 
+}
+
 //SEND FINAL RESULT
 document.getElementById("submit").onclick = function submit() {
     //create procedural verifier
@@ -85,8 +96,8 @@ document.getElementById("submit").onclick = function submit() {
     userResult = [];
 
     //AUTO RESTART
-    firstNumber = Math.floor(Math.random() * 100);
-    secondNumber = Math.floor(Math.random() * 100);
+    firstNumber = Math.floor(Math.random() * difficulty);
+    secondNumber = Math.floor(Math.random() * difficulty);
 
     document.getElementById("display").innerHTML =  `${firstNumber} + ${secondNumber}`;
 
@@ -95,9 +106,9 @@ document.getElementById("submit").onclick = function submit() {
 }
 
 //DIFFICULTIES
-document.getElementById("gen").onclick = function difficulty1() {
-    firstNumber = Math.floor(Math.random() * 100);
-    secondNumber = Math.floor(Math.random() * 100);
+document.getElementById("gen").onclick = function sum() {
+    firstNumber = Math.floor(Math.random() * difficulty);
+    secondNumber = Math.floor(Math.random() * difficulty);
 
     //DISPLAY ON -SCREEN-
     document.getElementById("display").innerHTML = `${firstNumber} + ${secondNumber}`;

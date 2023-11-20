@@ -29,13 +29,33 @@ color: rgb(255, 48, 48);
 text-shadow: 5px 4px 3px black;
 }
 
+button{
+    margin: 5px;
+    border: 2px var(--prefBorderColor); border-radius: 10px;
+    width: 90px;
+    height: 56px;
+    text-align: center;
+    vertical-align: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}
+
 #settings{
-    height: 50px;
-    width: 740px;
-    border: 5px black; border-radius: 10px; border-style: dashed;
-    background-color: rgb(241, 170, 38);
     margin: auto;
+    width: var(--PCprefxWidth);
+    height: 70px;
+    border: 2px solid black; border-radius: 40px;
+    background-color: bisque;
     display: flex;
+}
+
+.setbut{
+    width: 56px;
+    border: 0px; background-color: inherit;
+    margin: auto;
+}
+.setbut:hover{
+    background-color: rgb(240, 199, 149);
 }
 
 #page-title{
@@ -102,7 +122,11 @@ margin-bottom: 40px;
     height: fit-content;
     margin: auto; margin-bottom: 40px;
     background-color: rgb(206, 206, 206);
-    align-items: center; 
+    display: flex; align-items: center;
+}
+
+#main{
+    margin: auto;
 }
 
 .row{
@@ -143,16 +167,7 @@ margin-bottom: 40px;
     align-items: center;
 }
 
-button{
-    margin: 5px;
-    border: 2px var(--prefBorderColor); border-radius: 10px;
-    width: 90px;
-    height: 56px;
-    text-align: center;
-    vertical-align: auto;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 50px;
-}
+
 
 button:hover{
     background-color: rgb(168, 172, 177);
