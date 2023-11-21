@@ -73,19 +73,123 @@ document.getElementById("difThree").onclick = function cd3(){
    difficulty = 999; 
 }
 
+//GAME MODES
+let gameMode = "sum";
+
+document.getElementById("sum").onclick = function () {
+    gameMode = "sum";
+    console.log(gameMode);
+}
+document.getElementById("minus").onclick = function () {
+    gameMode = "minus";
+    console.log(gameMode);
+}
+document.getElementById("times").onclick = function () {
+    gameMode = "times";
+    console.log(gameMode);
+}
+document.getElementById("division").onclick = function () {
+    gameMode = "division";
+    console.log(gameMode);
+}
+document.getElementById("exponent").onclick = function () {
+    gameMode = "exponent";
+    console.log(gameMode);
+}
+document.getElementById("sqrRoot").onclick = function () {
+    gameMode = "sqrRoot";
+    console.log(gameMode);
+}
+document.getElementById("loga").onclick = function () {
+    gameMode = "loga";
+    console.log(gameMode);
+}
+
+//GAME 
+document.getElementById("gen").onclick = function game() {
+
+    firstNumber = Math.floor(Math.random() * difficulty);
+    secondNumber = Math.floor(Math.random() * difficulty);
+
+    //DISPLAY ON -SCREEN-
+    if (gameMode == "sum") {
+        document.getElementById("display").innerHTML = `${firstNumber} + ${secondNumber}`;
+
+    }else if (gameMode == "minus") {
+        document.getElementById("display").innerHTML = `${firstNumber} - ${secondNumber}`;
+        
+    }else if (gameMode == "times") {
+        document.getElementById("display").innerHTML = `${firstNumber} * ${secondNumber}`;
+        
+    }else if (gameMode == "division") {
+        document.getElementById("display").innerHTML = `${firstNumber} ÷ ${secondNumber}`;
+        
+    }else if (gameMode == "exponent") {
+        document.getElementById("display").innerHTML = `Work in progress 🚧🏗️`;
+
+    }else if (gameMode == "sqrRoot") {
+        document.getElementById("display").innerHTML = `Work in progress 🚧🏗️`;
+
+    }else if (gameMode == "loga") {
+        document.getElementById("display").innerHTML = `Work in progress 🚧🏗️`;
+        
+    }
+
+    //DEBUG
+    console.log(`Prompt: ${firstNumber}, ${secondNumber}`);
+}
+
+
 //SEND FINAL RESULT
 document.getElementById("submit").onclick = function submit() {
     //create procedural verifier
     let res = userResult.reduce((a, b) => a + b, 0)
 
     //check result
-    if (res == firstNumber + secondNumber) {
-        scrNumber += 10;
-        strNumber += 1;
-        ctrNumber += 1;
-    } else {
-        strNumber = 0;
-        ctrNumber += 1;
+    if (gameMode == "sum") {
+        if (res == firstNumber + secondNumber) {
+            scrNumber += 10;
+            strNumber += 1;
+            ctrNumber += 1;
+
+        } else {
+            strNumber += 0;
+            ctrNumber += 1;
+        }
+
+    }else if (gameMode == "minus") {
+        if (res == firstNumber - secondNumber) {
+            scrNumber += 15;
+            strNumber += 1;
+            ctrNumber += 1;
+
+        } else {
+            strNumber += 0;
+            ctrNumber += 1;
+        }
+        
+    }else if (gameMode == "times") {
+        if (res == firstNumber * secondNumber) {
+            scrNumber += 20;
+            strNumber += 1;
+            ctrNumber += 1;
+
+        } else {
+            strNumber += 0;
+            ctrNumber += 1;
+        }
+        
+    }else {
+        if (res == firstNumber / secondNumber) {
+            scrNumber += 30;
+            strNumber += 1;
+            ctrNumber += 1;
+
+        } else {
+            strNumber += 0;
+            ctrNumber += 1;
+        }
+        
     }
 
     document.getElementById("scr-number").innerHTML = scrNumber;
@@ -99,20 +203,29 @@ document.getElementById("submit").onclick = function submit() {
     firstNumber = Math.floor(Math.random() * difficulty);
     secondNumber = Math.floor(Math.random() * difficulty);
 
-    document.getElementById("display").innerHTML =  `${firstNumber} + ${secondNumber}`;
+    if (gameMode == "sum") {
+        document.getElementById("display").innerHTML = `${firstNumber} + ${secondNumber}`;
+
+    }else if (gameMode == "minus") {
+        document.getElementById("display").innerHTML = `${firstNumber} - ${secondNumber}`;
+        
+    }else if (gameMode == "times") {
+        document.getElementById("display").innerHTML = `${firstNumber} * ${secondNumber}`;
+        
+    }else if (gameMode == "division") {
+        document.getElementById("display").innerHTML = `${firstNumber} ÷ ${secondNumber}`;
+        
+    }else if (gameMode == "exponent") {
+        document.getElementById("display").innerHTML = `Work in progress 🚧🏗️`;
+
+    }else if (gameMode == "sqrRoot") {
+        document.getElementById("display").innerHTML = `Work in progress 🚧🏗️`;
+
+    }else if (gameMode == "loga") {
+        document.getElementById("display").innerHTML = `Work in progress 🚧🏗️`;
+        
+    }
 
     //DEBUG
     console.log(`User answer: ${res}`);
-}
-
-//DIFFICULTIES
-document.getElementById("gen").onclick = function sum() {
-    firstNumber = Math.floor(Math.random() * difficulty);
-    secondNumber = Math.floor(Math.random() * difficulty);
-
-    //DISPLAY ON -SCREEN-
-    document.getElementById("display").innerHTML = `${firstNumber} + ${secondNumber}`;
-    
-    //DEBUG
-    console.log(`Prompt: ${firstNumber} + ${secondNumber}`);
 }

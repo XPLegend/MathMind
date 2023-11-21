@@ -4,6 +4,7 @@
     --prefixHeight: 100px;
     --prefBorderColor: solid black;
     --numberSize: 50px;
+    --notWorkBGColor: rgba(255, 0, 0, 0.514);
 }
 
 body{
@@ -56,6 +57,18 @@ button{
 }
 .setbut:hover{
     background-color: rgb(240, 199, 149);
+}
+#exponent:hover{
+    background-color: var(--notWorkBGColor);
+}
+#sqrRoot:hover{
+    background-color: var(--notWorkBGColor);
+}
+#loga:hover{
+    background-color: var(--notWorkBGColor);
+}
+#rulbut:hover{
+    background-color: var(--notWorkBGColor);
 }
 
 #page-title{
