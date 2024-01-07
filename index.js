@@ -61,6 +61,9 @@ document.getElementById("nine").onclick = function add9() {
 document.getElementById("zero").onclick = function add0() {
     userResult.push("0");
 }
+document.getElementById("minusKey").onclick = function addminus() {
+    userResult.push("-");
+}
 
 //SET DIFFICULTY
 document.getElementById("difOne").onclick = function cd1(){
@@ -142,11 +145,15 @@ document.getElementById("gen").onclick = function game() {
 
 //SEND FINAL RESULT
 document.getElementById("submit").onclick = function submit() {
+
     //create procedural verifier
-    let res = userResult.reduce((a, b) => a + b, 0)
+    let userInputString = userResult.join("");  //unisce userResult in una stringa
+
+    let res = parseInt(userInputString, 10);    //10 indica la base numerica decimale
 
     //check result
     if (gameMode == "sum") {
+    
         if (res == firstNumber + secondNumber) {
             scrNumber += 10;
             strNumber += 1;
@@ -158,6 +165,7 @@ document.getElementById("submit").onclick = function submit() {
         }
 
     }else if (gameMode == "minus") {
+
         if (res == firstNumber - secondNumber) {
             scrNumber += 15;
             strNumber += 1;
@@ -169,6 +177,7 @@ document.getElementById("submit").onclick = function submit() {
         }
         
     }else if (gameMode == "times") {
+
         if (res == firstNumber * secondNumber) {
             scrNumber += 20;
             strNumber += 1;
@@ -180,6 +189,7 @@ document.getElementById("submit").onclick = function submit() {
         }
         
     }else {
+
         if (res == firstNumber / secondNumber) {
             scrNumber += 30;
             strNumber += 1;
