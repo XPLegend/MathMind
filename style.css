@@ -105,13 +105,14 @@ font-weight: italic;
 border-radius: 10px;
 width: var(--PCprefxWidth);  height: fit-content;
 padding-left: 10px;  padding-right: 10px;
+padding-top: 5px;    padding-bottom: 5px;
 margin: auto;
 margin-top: 20px;
 margin-bottom: 40px;
 }
 
 #second-container{
-    margin: auto;
+    margin: auto;    margin-top: 15px;
     width: var(--PCprefxWidth);
     background-color: grey;
     height: fit-content;

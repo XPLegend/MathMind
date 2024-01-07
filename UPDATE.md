@@ -15,3 +15,12 @@ V1.0 RELEASE
 Added the four basic math functions: +, -, * and /
 Small interface tweak
 Predisposed to V1.5 (adds exponent, square roots and logarithms)
+
+
+Issue Fix 07/01/2024
+V1.0.1
+Fixed Issue "Negative Numbers": you could not insert a negative number, now you can.
+Added Icon
+Upgraded UI
+Upgraded the rules section
+Updated README.md

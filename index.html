@@ -4,7 +4,7 @@
     <title>MathMind</title>
     <meta charset="utf-8">
     <meta name="description" content="A series of math challenges to keep your mind active">
-    <link rel="shortcut icon" href="#">
+    <link rel="shortcut icon" href="Assets/pixil-frame-0.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -53,16 +53,29 @@
     
     <div id="How-To-Play"> <!--Put it into the settings bar (menù a scomparsa)-->
         <p>
-            The rules are simple:
+            <b>The rules</b> are simple: <br>
             Your goal is to solve mathematical expressions with your mind. <br>
             For each expression that you solve your <b>score, streak and counter</b> will increase. <br>
-            If you fail to solve one your:<br>
+            If you fail to solve one, your:<br>
             Score - will stay the same <br>
             Streak - turn back to 0    <br>
             Counter - increase         <br>
+
+            <b>Mode Switch:</b> <br>
+            On the top of the page you can choose between varius operation type. <br>
+            <b>Difficulty Switch:</b> <br>
+            You can choose between three difficulties, by playing with one, two or three digits.
         </p>
     </div>
     
+    <div id="difficulties">
+        <h3>CHANGE DIFFICULTY</h3>
+        
+        <button id="difOne">1 digit</button>
+        <button id="difTwo">2 digits</button>
+        <button id="difThree">3 digits</button>
+    </div>
+
     <div id="second-container">
      <div id="score-streak-container">
         <div id="score">
@@ -97,7 +110,7 @@
         </div><br>
         <div class="row">
             <button class="button" id="zero" type="button">0</button>
-            <button class="button" id="minus" type="button"><img src="https://cdn-icons-png.flaticon.com/512/56/56889.png"></button>
+            <button class="button" id="minusKey" type="button"><img src="https://cdn-icons-png.flaticon.com/512/56/56889.png"></button>
             <button class="button" id="comma" type="button"><img src="https://static.thenounproject.com/png/2166010-200.png"></button>
         </div>
         </div>
@@ -114,19 +127,12 @@
      </div>
     </div>
 
-    <div id="difficulties">
-        <h3>CHANGE DIFFICULTY</h3>
-        
-        <button id="difOne">1 digit</button>
-        <button id="difTwo">2 digits</button>
-        <button id="difThree">3 digits</button>
-    </div>
 </div>
     
 <footer>
 <p>Developed by: XPLegend</p>
 <p> Hosted by: GitHub </p>
-<p>Version 0.7  ---  Last modified on: 20/11/2023</p>  <!--F.T.A.: Automate this update process-->
+<p>Version 1.0.1  ---  Last modified on: 07/01/2024</p>  <!--F.T.A.: Automate this update process-->
 <p>More information about this project at: <a href="https://github.com/XPLegend/MathMind">MathMind</a>, on GitHub</p>
 </footer>
 

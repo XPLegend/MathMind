@@ -10,3 +10,11 @@ This is a game created to improve your speed and precision at mental calculation
 You can choose between various difficulty levels and differnt types of operations, from sums to square roots (and maybe even beyond that)!!
 
 For every operation that you got right your score will increase so you can challenge yourself to get better and better every day!
+
+## What's New - Patch of 07/01/2024
+
+-You can now answer a negative number, before I forgot to add that option
+
+-Improved the UI by making it more clear and good looking
+
+-Finally this page has it's own icon
