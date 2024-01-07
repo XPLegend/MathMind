@@ -1,4 +1,6 @@
 # MathMind
+https://xplegend.github.io/MathMind/
+
 ## Behind MathMind:
 While learining HTML, CSS and JS, I've decided to create a web page to put into practice what I've learnt.
 This page and it's content might change in the future, it depends on what I feel to create.
